@@ -1,0 +1,65 @@
+" Set compatibility to Vim only.
+set nocompatible
+
+
+" Helps force plug-ins to load correctly when it is turned back on below.
+filetype off
+
+colo murphy
+
+" Turn on syntax highlighting.
+syntax on
+
+" Turn the spell check on
+set spell spelllang=en_us
+
+set mouse=a
+
+"Set standout mode
+set t_so=^[[1;32;45m    " standout mode
+
+" Set text wrap
+set wrap
+
+"Vim's auto indentation feature does not work properly with text copied from outisde of Vim. Press the <F2> key to toggle paste mode on/off.
+nnoremap <F2> :set invpaste paste?<CR>
+imap <F2> <C-O>:set invpaste paste?<CR>
+set pastetoggle=<F2>
+
+" Uncomment below to set the max textwidth. Use a value corresponding to the width of your screen.
+set textwidth=79
+set formatoptions=tcqrn1
+set shiftwidth=2
+set noshiftround
+
+" Display options
+set showmode
+set showcmd
+
+" Highlight matching pairs of brackets. Use the '%' character to jump between them.
+set matchpairs+=<:>
+
+" Display different types of white spaces.
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+
+" Show line numbers
+set number
+
+" Set status line display
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
+
+" Encoding
+set encoding=utf-8
+
+" Highlight matching search patterns
+set hlsearch
+" Enable incremental search
+set incsearch
+" Include matching uppercase words with lowercase search term
+set ignorecase
+" Include only uppercase words with uppercase search term
+set smartcase
+
+
+
